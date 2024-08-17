@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <title>Tips</title>
+  </head>
+  <body class="overflow-x-hidden bg-[#f0efeb]">
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[80%]">
+      <img src="" alt="" class="w-full" />
+    </div>
+
+    <!-- Home page -->
+    <nav
+      class="w-full fixed px-5 lg:px-[8%] xl:px-[8%] py-4 flex items-center justify-between z-50"
+    >
+      <div class="flex w-28 cursor-pointer mr-14">
+        <p class="font-medium mt-1.85">Code Tips</p>
+        <img
+          src="/iconsPng/Vigor_Idea-Coding-Light_Bulb-invention-512.png"
+          alt=""
+          class="w-7 h-7"
+        />
+      </div>
+      <ul
+        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50"
+      >
+        <li><a href="#home">Home</a></li>
+
+        <div
+          class="relative flex justify-between items-center gap-2"
+          id="dropDownButton"
+        >
+          <li>
+            <a href="#library" onclick="toggleDropdown();">Library</a>
+            <div
+              id="dropdown"
+              class="mt-4 border-gray bg-white p-2 rounded w-[170px] absolute shadow-sm hidden"
+            >
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                HTML
+              </div>
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                CSS
+              </div>
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                Java Script
+              </div>
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                Phyton
+              </div>
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                C++
+              </div>
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                Others
+              </div>
+            </div>
+          </li>
+          <img
+            src="/iconsPng/down-arrow.png"
+            class="w-5 mt-1 flex items-center"
+            alt=""
+          />
+        </div>
+
+        <li><a href="#service">Service</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#My tips">My tips</a></li>
+      </ul>
+
+      <div class="flex items-center gap-4">
+        <button>
+          <img src="/iconsPng/moon.png" alt="" class="w-6" />
+        </button>
+        <a
+          class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 ml-4 bg-gray-500 text-white rounded-full mx-auto hover:bg-black/80 duration-500"
+          href="#contact"
+          >Login / Signup
+        </a>
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+          <img src="/iconsPng/menu-burger.png" alt="" class="w-6" />
+        </button>
+      </div>
+
+      <!-- Mobile MenuView -->
+      <ul
+        id="sidemenu"
+        class="flex md:hidden flex-col py-20 px-10 gap-4 fixed -right-64 top-0 w-64 z-50 h-screen bg-gray-500 transition duration-500"
+      >
+        <div
+          class="absolute right-6 top-6 cursor-pointer"
+          onclick="closeMenu()"
+        >
+          <img src="/iconsPng/cross.png" alt="" class="w-6" />
+        </div>
+
+        <li>
+          <a
+            href="#home"
+            onclick="closeMenu()"
+            class="hover:text-white/80 duration-300"
+            >Home</a
+          >
+        </li>
+        <!-- <li>
+         <a
+           href="#library"
+           onclick="closeMenu()"
+           class="hover:text-white/80 duration-300"
+           >Library</a
+         >
+       </li> -->
+
+        <div
+          class="relative flex justify-between items-center gap-2"
+          id="dropDownButton"
+        >
+          <li>
+            <a
+              href="#library"
+              class="hover:text-white/80 duration-300"
+              onclick="toggleDropdown();"
+              >Library</a
+            >
+            <div
+              id="dropdown"
+              class="mt-4 border-gray bg-white p-2 rounded w-[170px] absolute shadow-sm md:hidden"
+            >
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                HTML
+              </div>
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                CSS
+              </div>
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                Java Script
+              </div>
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                Phyton
+              </div>
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                C++
+              </div>
+              <div class="cursor-pointer hover:bg-gray-500 rounded px-2">
+                Others
+              </div>
+            </div>
+          </li>
+          <img
+            src="/iconsPng/down-arrow.png"
+            class="w-5 mt-1 flex items-center"
+            alt=""
+          />
+        </div>
+
+        <li>
+          <a
+            href="#service"
+            onclick="closeMenu()"
+            class="hover:text-white/80 duration-300"
+            >Service</a
+          >
+        </li>
+        <li>
+          <a
+            href="#community"
+            onclick="closeMenu()"
+            class="hover:text-white/80 duration-300"
+            >Community</a
+          >
+        </li>
+        <li>
+          <a
+            href="#myTips"
+            onclick="closeMenu()"
+            class="hover:text-white/80 duration-300"
+            >My tips</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Basic add and edit page -->
+
+    <div id="addpage" class="w-full px-[-12%] py-10 scroll-mt-20">
+      <h4 class="text-center mb-2 text-lg">Share with the community</h4>
+      <h2 class="text-center text-5xl">Add tip</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5">
+        I'd love to hear from you! If you have any questions, comments or
+        feedback, please use the form below.
+      </p>
+
+      <form action="" class="max-w-2xl mx-auto">
+        <div class="grid grid-cols-2 gap-6 mt-10 mb-8">
+          <input
+            type="text"
+            placeholder="Enter your name"
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+          />
+
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+          />
+        </div>
+
+        <textarea
+          rows="6"
+          placeholder="Enter your tip"
+          class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
+        ></textarea>
+
+        <button
+          class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-gray-500 text-white rounded-full mx-auto hover:bg-black/80 duration-500"
+        >
+          Submit now
+        </button>
+      </form>
+    </div>
+
+    <script src="/codeTips.js"></script>
+  </body>
+</html>
